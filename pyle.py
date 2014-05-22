@@ -10,7 +10,7 @@ app = Flask(__name__)
 def main():
     return "nope."
 
-@app.route("/<file>/data")
+@app.route("/data/<file>")
 def readfile(file):
     return send_from_directory(STATIC_PATH, file)
 
@@ -22,7 +22,7 @@ def showfile(file):
         return render_template("image.html",
                 title="pyle :: preview",
                 filename=file,
-                filepath="/" + file + "/data")
+                filepath="/data/" + file)
     else:
         return readfile(file)
 
