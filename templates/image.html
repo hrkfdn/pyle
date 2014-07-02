@@ -1,25 +1,7 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ title }}</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-</head>
-<body>
-<div class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a href="#" class="navbar-brand">Pyle</a>
-			<p class="navbar-text text-center">{{ filename }}</p>
-		</div>
-	</div>
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="center-block">
+	<img style="max-height: 100%;" src="{{ filepath }}" alt="Image" class="img-rounded">
 </div>
-<div class="container">
-	<div class="text-center">
-		<img src="{{ filepath }}" alt="Image" class="img-responsive img-rounded">
-	</div>
-</div>
-</body>
-</html>
+{% endblock content %}

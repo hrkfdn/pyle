@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="panel panel-primary">
+    <div class="panel-heading"><h3 class="panel-title">Directory Index</h3></div>
+    <table class="table table-hover table-condensed table-bordered">
+        {% for dir in directories %}
+        <ul style="list-style: none;">
+            <li>
+            <span class="glyphicon glyphicon-folder-close"></span>
+            <a href="{{ "/list" ~ path ~ dir }}">{{ dir }}</a>
+            </li>
+        </ul>
+        {% endfor %}
+        {% for file in files %}
+        <ul style="list-style: none;">
+            <li>
+            <span class="glyphicon glyphicon-file"></span>
+            <a href="{{ path ~ file }}">{{ file }}</a>
+            </li>
+        </ul>
+        {% endfor %}
+    </table>
+</div>
+{% endblock content %}
