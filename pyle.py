@@ -51,7 +51,8 @@ def showfile(file):
     if mime_type[0] is not None and mime_type[0].startswith("image"):
         return render_template("image.html",
                 title="pyle :: preview",
-                filepath="/data/" + file)
+                filepath="/data/" + file,
+                filename=os.path.basename(file))
     else:
         return readfile(file)
 

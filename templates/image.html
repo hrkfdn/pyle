@@ -1,7 +1,18 @@
-{% extends "layout.html" %}
-{% block content %}
-
-<div class="center-block">
-	<img style="max-height: 100%;" src="{{ filepath }}" alt="Image" class="img-rounded">
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
+</head>
+<body>
+<div class="preview">
+    <img src="{{ filepath }}" alt="pyle image preview"/>
 </div>
-{% endblock content %}
+<div class="info">
+    <p>filename:</p>
+    <p class="filename">{{ filename }}</p>
+</div>
+</body>
+</html>
